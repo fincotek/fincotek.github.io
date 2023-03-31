@@ -1,6 +1,7 @@
 import {
   AppBar,
-  Box, Button,
+  Box,
+  Button,
   Divider,
   Drawer,
   List,
@@ -8,7 +9,7 @@ import {
   ListItemButton,
   ListItemText,
   Toolbar,
-} from '@mui/material';
+} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -21,7 +22,11 @@ export default function Navbar() {
   const drawer = (
     <div>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { sm: 'none' } }}>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ flexGrow: 1, display: { sm: "none" } }}
+        >
           Fincotek White Paper
         </Typography>
       </Toolbar>
@@ -104,13 +109,23 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+          >
             Fincotek White Paper
           </Typography>
           <Box>
-            <Button component="a" href="https://fincotek.com">App</Button>
-            <Button component="a" href="https://twitter.com/fincotek">Twitter</Button>
-            <Button component="a" href="https://github.com/fincotek">Github</Button>
+            <Button component="a" href="https://fincotek.com">
+              App
+            </Button>
+            <Button component="a" href="https://twitter.com/fincotek">
+              Twitter
+            </Button>
+            <Button component="a" href="https://github.com/fincotek">
+              Github
+            </Button>
           </Box>
         </Toolbar>
         <Divider />
