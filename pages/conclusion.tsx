@@ -1,4 +1,4 @@
-export default () => {
+export default function Conclusion() {
   return (
     <>
       <h1>Conclusion</h1>

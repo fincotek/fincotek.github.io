@@ -1,6 +1,6 @@
 import { List, ListItem, ListItemText } from "@mui/material";
 
-export default () => {
+export default function Tokenomics() {
   return (
     <>
       <h1>Tokenomics</h1>

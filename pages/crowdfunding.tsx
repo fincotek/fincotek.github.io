@@ -1,4 +1,4 @@
-export default () => {
+export default function Crowdfunding() {
   return (
     <>
       <h1>Crowdfunding</h1>

@@ -20,7 +20,7 @@ const steps = [
     description: `${new Date("2024-01-01").toLocaleDateString()}`,
   },
 ];
-export default () => {
+export default function Roadmap() {
   const [activeStep] = useState(2);
   return (
     <>

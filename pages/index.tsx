@@ -30,7 +30,7 @@ export default function Home() {
           than ever. In recent years, blockchain technology has emerged as a
           promising solution for ensuring the transparency and security of
           online transactions. In this whitepaper, we present a project called
-          "Fincotek" that combines blockchain technology with crowdfunding and
+          Fincotek that combines blockchain technology with crowdfunding and
           product authenticity to create a secure and efficient platform for
           online transactions.
         </p>

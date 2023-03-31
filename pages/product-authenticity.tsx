@@ -1,4 +1,4 @@
-export default () => {
+export default function ProductAuthenticity() {
   return (
     <>
       <h1>Product Authenticity</h1>

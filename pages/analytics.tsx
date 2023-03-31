@@ -1,4 +1,4 @@
-export default () => {
+export default function Analytics() {
   return (
     <>
       <h1>Analytics Tracking</h1>

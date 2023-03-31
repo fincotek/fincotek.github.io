@@ -25,7 +25,7 @@ const steps = [
   },
 ];
 
-export default () => {
+export default function Presale() {
   return (
     <>
       <h1>Presale</h1>
