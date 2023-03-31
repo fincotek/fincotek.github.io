@@ -1,33 +1,68 @@
-import { AppBar, Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar } from "@mui/material";
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import {
+  AppBar,
+  Box,
+  Divider,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+} from "@mui/material";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import Link from "next/link";
 
 export const drawerWidth = 240;
 
 export default function Navbar() {
-
   const drawer = (
     <div>
+      <Toolbar />
+      <Divider />
       <List>
-        <ListItem>
+        <ListItem component={Link} href="/">
           <ListItemButton>
-            <ListItemText primary="Overwiew" />
+            <ListItemText primary="Overview" />
           </ListItemButton>
         </ListItem>
-        <ListItem>
+        <ListItem component={Link} href="/product-authenticity">
           <ListItemButton>
+            <ListItemText primary="Product Authenticity" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem component={Link} href="/crowdfunding">
+          <ListItemButton>
+            <ListItemText primary="Crowdfunding" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem component={Link} href="/analytics">
+          <ListItemButton>
+            <ListItemText primary="Analytics Tracking" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem component={Link} href="/conclusion">
+          <ListItemButton>
+            <ListItemText primary="Conclusion" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+      <Divider />
+      <List>
+        <ListItem>
+          <ListItemButton component={Link} href="/presale">
             <ListItemText primary="Presale" />
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton component={Link} href="/tokenomics">
             <ListItemText primary="Tokenomics" />
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton component={Link} href="/roadmap">
             <ListItemText primary="Roadmap" />
           </ListItemButton>
         </ListItem>
@@ -41,11 +76,12 @@ export default function Navbar() {
     setMobileOpen(!mobileOpen);
   };
 
-  const container = typeof window !== 'undefined' ? () => window.document.body : undefined;
+  const container =
+    typeof window !== "undefined" ? () => window.document.body : undefined;
 
   return (
     <>
-      <AppBar 
+      <AppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -60,15 +96,15 @@ export default function Navbar() {
             color="inherit"
             aria-label="menu"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Fincotek Docs
+            Fincotek White Paper
           </Typography>
         </Toolbar>
-        <Divider/>
+        <Divider />
       </AppBar>
       <Box
         component="nav"
@@ -84,8 +120,11 @@ export default function Navbar() {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
@@ -93,8 +132,11 @@ export default function Navbar() {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
           open
         >
