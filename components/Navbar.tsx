@@ -20,31 +20,35 @@ export const drawerWidth = 240;
 export default function Navbar() {
   const drawer = (
     <div>
-      <Toolbar />
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { sm: 'none' } }}>
+          Fincotek White Paper
+        </Typography>
+      </Toolbar>
       <Divider />
       <List>
-        <ListItem component={Link} href="/">
-          <ListItemButton>
+        <ListItem>
+          <ListItemButton component={Link} href="/">
             <ListItemText primary="Overview" />
           </ListItemButton>
         </ListItem>
-        <ListItem component={Link} href="/product-authenticity">
-          <ListItemButton>
+        <ListItem>
+          <ListItemButton component={Link} href="/product-authenticity">
             <ListItemText primary="Product Authenticity" />
           </ListItemButton>
         </ListItem>
-        <ListItem component={Link} href="/crowdfunding">
-          <ListItemButton>
+        <ListItem>
+          <ListItemButton component={Link} href="/crowdfunding">
             <ListItemText primary="Crowdfunding" />
           </ListItemButton>
         </ListItem>
-        <ListItem component={Link} href="/analytics">
-          <ListItemButton>
+        <ListItem>
+          <ListItemButton component={Link} href="/analytics">
             <ListItemText primary="Analytics Tracking" />
           </ListItemButton>
         </ListItem>
-        <ListItem component={Link} href="/conclusion">
-          <ListItemButton>
+        <ListItem>
+          <ListItemButton component={Link} href="/conclusion">
             <ListItemText primary="Conclusion" />
           </ListItemButton>
         </ListItem>
@@ -100,12 +104,14 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
             Fincotek White Paper
           </Typography>
-          <Button component="a" href="https://fincotek.com">App</Button>
-          <Button component="a" href="https://twitter.com/fincotek">Twitter</Button>
-          <Button component="a" href="https://github.com/fincotek">Github</Button>
+          <Box>
+            <Button component="a" href="https://fincotek.com">App</Button>
+            <Button component="a" href="https://twitter.com/fincotek">Twitter</Button>
+            <Button component="a" href="https://github.com/fincotek">Github</Button>
+          </Box>
         </Toolbar>
         <Divider />
       </AppBar>
