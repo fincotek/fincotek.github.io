@@ -1,24 +1,33 @@
 import Navbar, { drawerWidth } from "./Navbar";
 import Footer from "./Footer";
 import { ReactNode } from "react";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Navbar />
       <main>
-        <Container
+        <Box
           sx={{
+            display: "flex",
+            flexDirection: "column",
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
             paddingTop: { xs: "56px", md: "64px" },
+            height: "100vh",
           }}
         >
-          {children}
-        </Container>
+          <Container>{children}</Container>
+          <Box
+            sx={{
+              mt: "auto",
+            }}
+          >
+            <Footer />
+          </Box>
+        </Box>
       </main>
-      <Footer />
     </>
   );
 }

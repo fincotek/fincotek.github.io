@@ -20,7 +20,7 @@ export const drawerWidth = 240;
 
 export default function Navbar() {
   const drawer = (
-    <div>
+    <>
       <Toolbar>
         <Typography
           variant="h6"
@@ -76,12 +76,16 @@ export default function Navbar() {
           </ListItemButton>
         </ListItem>
       </List>
-    </div>
+    </>
   );
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
+  const handleDrawerOpen = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const handleDrawerClose = () => {
     setMobileOpen(!mobileOpen);
   };
 
@@ -104,7 +108,7 @@ export default function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            onClick={handleDrawerToggle}
+            onClick={handleDrawerOpen}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
@@ -139,9 +143,9 @@ export default function Navbar() {
           container={container}
           variant="temporary"
           open={mobileOpen}
-          onClose={handleDrawerToggle}
+          onClose={handleDrawerClose}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
