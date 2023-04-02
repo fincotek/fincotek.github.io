@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Layout from "@/components/Layout";
 import { Container } from "@mui/material";
+import Head from "next/head";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -24,13 +25,24 @@ export default function App({ Component, pageProps }: AppProps) {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Layout>
-        <Container maxWidth="md">
-          <Component {...pageProps} />
-        </Container>
-      </Layout>
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Fincotek Whitepaper</title>
+        <meta
+          name="description"
+          content="Fincotek offer wallet analytics CEX & DEX. A token launch platform web3 ethereum. Based on blockchain technology, our platform offers maximum level of transparency."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Layout>
+          <Container maxWidth="md">
+            <Component {...pageProps} />
+          </Container>
+        </Layout>
+      </ThemeProvider>
+    </>
   );
 }

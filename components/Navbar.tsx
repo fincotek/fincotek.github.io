@@ -82,11 +82,11 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerOpen = () => {
-    setMobileOpen(!mobileOpen);
+    setMobileOpen(true);
   };
 
   const handleDrawerClose = () => {
-    setMobileOpen(!mobileOpen);
+    setMobileOpen(false);
   };
 
   const container =
@@ -144,9 +144,11 @@ export default function Navbar() {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerClose}
+          onClick={handleDrawerClose}
           ModalProps={{
             keepMounted: true,
           }}
+          anchor="left"
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
