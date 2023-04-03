@@ -7,7 +7,7 @@ const steps = [
     description: (
       <Button
         sx={{
-          mt: 2,
+          mt: 1,
         }}
         component="a"
         href="https://fincotek.com/presale"
@@ -19,9 +19,11 @@ const steps = [
   },
   {
     label: "Public Sale",
+    description: '2023/09'
   },
   {
     label: "Private Sale",
+    description: '2024/01'
   },
 ];
 

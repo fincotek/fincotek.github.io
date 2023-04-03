@@ -16,7 +16,7 @@ const steps = [
     description: `${new Date("2023-09-01").toLocaleDateString()}`,
   },
   {
-    label: "Crowdfunding",
+    label: "Gaming payment",
     description: `${new Date("2024-01-01").toLocaleDateString()}`,
   },
 ];

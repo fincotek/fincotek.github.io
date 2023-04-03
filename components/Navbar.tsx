@@ -61,13 +61,13 @@ export default function Navbar() {
       <Divider />
       <List>
         <ListItem>
-          <ListItemButton component={Link} href="/presale">
-            <ListItemText primary="Presale" />
+          <ListItemButton component={Link} href="/tokenomics">
+            <ListItemText primary="Tokenomics" />
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton component={Link} href="/tokenomics">
-            <ListItemText primary="Tokenomics" />
+          <ListItemButton component={Link} href="/presale">
+            <ListItemText primary="Presale" />
           </ListItemButton>
         </ListItem>
         <ListItem>
