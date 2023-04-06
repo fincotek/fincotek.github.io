@@ -38,23 +38,13 @@ export default function Navbar() {
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton component={Link} href="/product-authenticity">
-            <ListItemText primary="Product Authenticity" />
+          <ListItemButton component={Link} href="/features">
+            <ListItemText primary="Features" />
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton component={Link} href="/crowdfunding">
-            <ListItemText primary="Crowdfunding" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} href="/analytics">
-            <ListItemText primary="Analytics Tracking" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} href="/conclusion">
-            <ListItemText primary="Conclusion" />
+          <ListItemButton component={Link} href="/blockchain">
+            <ListItemText primary="Fincotek Blockchain" />
           </ListItemButton>
         </ListItem>
       </List>

@@ -19,11 +19,11 @@ const steps = [
   },
   {
     label: "Public Sale",
-    description: '2023/09'
+    description: "2023/09",
   },
   {
     label: "Private Sale",
-    description: '2024/01'
+    description: "2024/01",
   },
 ];
 
