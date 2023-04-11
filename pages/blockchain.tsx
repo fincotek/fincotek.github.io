@@ -15,7 +15,7 @@ export default function Blockchain() {
             ml: "auto",
           }}
         >
-          <Button variant="outlined" href="http://testnet.fincotek.com">
+          <Button variant="outlined" href="https://explorer.fincotek.com">
             Fincotek Explorer
           </Button>
         </Box>
